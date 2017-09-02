@@ -40,11 +40,11 @@ class Heap {
         when {
         // There is no left child.
             leftChildPos > size -> return
-        // There is a left child, check if right child is smaller.
+        // There is a left child, but no right child.
+            leftChildPos == size -> minChildPos = leftChildPos
+        // Both children are present, check which child is smaller.
             leftChildPos < size ->
                 minChildPos = if (elements[leftChildPos]!! < elements[rightChildPos]!!) leftChildPos else rightChildPos
-        // There is no right child.
-            leftChildPos == size -> minChildPos = leftChildPos
         }
 
         // Swap places if the child is smaller than the parent.
