@@ -12,9 +12,7 @@ class Heap {
         heapifyUp(size)
     }
 
-    fun extractMinimum(): Int? {
-        return delete(1)
-    }
+    fun extractMinimum(): Int? = delete(1)
 
     fun delete(pos: Int): Int? {
         val removed = elements[pos] ?: return null
