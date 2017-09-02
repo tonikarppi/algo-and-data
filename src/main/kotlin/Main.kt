@@ -1,15 +1,24 @@
-import datastructures.LList
+import datastructures.Heap
 
 fun main(args: Array<String>) {
 
-    val list = LList<Int>()
+    val heap = Heap()
 
-    list.insertAtStart(1)
-    list.insertAtStart(2)
-    list.insertAtStart(3)
-    list.insertAtStart(4)
+    heap.insert(5)
+    heap.insert(2)
+    heap.insert(10)
+    heap.insert(1)
+    heap.insert(22)
+    heap.insert(3)
+    heap.insert(9)
+    heap.insert(0)
 
-    println(list)
+    println(heap)
 
-    println(list.search(1))
+    while (!heap.isEmpty()) {
+        val min = heap.extractMinimum()
+        println("Extracted $min")
+        println(heap)
+    }
+
 }
