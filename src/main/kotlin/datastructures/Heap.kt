@@ -17,14 +17,11 @@ class Heap {
     }
 
     fun delete(pos: Int): Int? {
-        if (pos >= 1) {
-            val removed = elements[pos]
-            elements[pos] = elements[size]
-            elements[size--] = null
-            heapifyDown(pos)
-            return removed
-        }
-        return null
+        val removed = elements[pos] ?: return null
+        elements[pos] = elements[size]
+        elements[size--] = null
+        heapifyDown(pos)
+        return removed
     }
 
     private fun heapifyUp(pos: Int) {
