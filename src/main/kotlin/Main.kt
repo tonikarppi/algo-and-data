@@ -1,9 +1,15 @@
-import datastructures.BinaryTree
+import datastructures.LList
 
 fun main(args: Array<String>) {
 
-    val list = listOf(5, 3, 10, 33, 1, 0, 353, 63, 11, 30, 6)
-    val tree = BinaryTree.build(list) ?: return
-    println(tree)
-    println(tree.search(6))
+    val list = LList<Int>()
+
+    list.insertAtStart(1)
+    list.insertAtStart(2)
+    list.insertAtStart(3)
+    list.insertAtStart(4)
+
+    println(list)
+
+    println(list.search(1))
 }
