@@ -34,7 +34,7 @@ class Heap {
     }
 
     private fun heapifyDown(pos: Int) {
-        var minChildPos: Int = -1
+        var minChildPos = -1
         val leftChildPos = 2 * pos
         val rightChildPos = 2 * pos + 1
         when {
