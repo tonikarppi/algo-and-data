@@ -13,11 +13,15 @@ class Heap {
     }
 
     fun extractMinimum(): Int? {
-        val top = elements[1]
-        elements[1] = elements[size]
+        val min = elements[1]
+        delete(1)
+        return min
+    }
+
+    fun delete(pos: Int) {
+        elements[pos] = elements[size]
         elements[size--] = null
-        heapifyDown(1)
-        return top
+        heapifyDown(pos)
     }
 
     private fun heapifyUp(pos: Int) {

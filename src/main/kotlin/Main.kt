@@ -15,6 +15,10 @@ fun main(args: Array<String>) {
 
     println(heap)
 
+    heap.delete(4)
+
+    println(heap)
+
     while (!heap.isEmpty) {
         val min = heap.extractMinimum()
         println("Extracted $min")
