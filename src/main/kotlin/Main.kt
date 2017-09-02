@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
 
     println(heap)
 
-    while (!heap.isEmpty()) {
+    while (!heap.isEmpty) {
         val min = heap.extractMinimum()
         println("Extracted $min")
         println(heap)

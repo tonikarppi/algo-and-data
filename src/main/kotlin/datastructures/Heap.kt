@@ -2,6 +2,8 @@ package datastructures
 
 class Heap {
 
+    val isEmpty: Boolean get() = size == 0
+
     private val elements: Array<Int?> = Array(20) { null }
     private var size: Int = 0
 
@@ -17,8 +19,6 @@ class Heap {
         heapifyDown(1)
         return top
     }
-
-    fun isEmpty(): Boolean = size == 0
 
     private fun heapifyUp(pos: Int) {
         if (pos > 1) {
